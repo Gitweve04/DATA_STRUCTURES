@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+class Solution {
+  public:
+    
+    int largest(vector<int> &arr) {
+        int n = arr.size();
+        int max_no = arr[0];
+       
+        for (int i = 1; i < n; i++) {
+            
+            if (arr[i] > max_no) {
+                max_no = arr[i];
+            }
+        }
+        return max_no;
+    }
+};
+
+int main() {
+    vector<int> arr = {10, 5, 20, 8, 15};
+    Solution sol;
+    int result = sol.largest(arr);
+    cout << "The largest element in the array is: " << result << endl;
+    return 0;
+}
